@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<time.h>
+int main()
+{
+    int i,dicerolla,dicerollb,dicerollc,correctanswer,dicerolld,totalscore;
+    char guess[1],H,L;
+    srand(time(NULL));
+    printf("You are about to perform in a betting game\n");
+    for(i=1;i<2;i++)
+    {
+    dicerolla =( rand()%6)+1 ;
+    printf("Dice roll A %d\n ", dicerolla);
+    }
+
+ for(i=1;i<2;i++)
+    {
+    dicerollb =( rand()%6)+1 ;
+    printf("Dice roll B %d\n ", dicerollb);
+    }
+for(i=1;i<2;i++)
+    {
+    dicerollc =( rand()%6)+1 ;
+    printf("Dice roll C %d\n ", dicerollc);
+    }
+    totalscore=dicerolla+dicerollb+dicerollc;
+    printf("The total score of the numbers above is %d\n",totalscore);
+    printf("Guess if the preceding number to come out would  be   higher or lower than the sum above\n");
+    printf("Guess 'H' for higher or 'L' for lower:");
+    scanf("%c",guess);
+    dicerolld=(rand()%20+1);
+    printf("preceding answer is %d\n",dicerolld);
+
+    if((dicerolld>totalscore)&(guess=='H'))
+    {
+        printf("Cheers mate");
+    }
+    else if((dicerolld<totalscore)&(guess=='L'))
+    {
+        printf("Cheers mate");
+    }
+
+    else
+        {
+            printf("\nSorry, But u suck.");
+        }
+
+
+
+
+
+
+    return 0;
+}
